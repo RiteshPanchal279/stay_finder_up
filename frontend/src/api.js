@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL, //will adjust at the time of deployement
+  baseURL: import.meta.env.VITE_BACKEND_URL, //will adjust at the time of deployement
 });
 
 // Automatically attach token to requests (if using auth-protected routes later)

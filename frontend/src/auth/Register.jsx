@@ -13,7 +13,7 @@ export default function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await API.post(`${process.env.VITE_BACKEND_URL}/auth/register`, { name, email, password, role });
+      const res = await API.post(`${import.meta.env.VITE_BACKEND_URL}/auth/register`, { name, email, password, role });
       toast.success(res.data.message);
       navigate("/login");
     } catch (err) {

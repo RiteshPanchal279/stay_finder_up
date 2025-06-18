@@ -28,7 +28,7 @@ export function useBooking() {
         endDate: bookingData.endDate,
       };
 
-      const res = await API.post(`${process.env.VITE_BACKEND_URL}/bookings`, booking);
+      const res = await API.post(`${import.meta.env.VITE_BACKEND_URL}/bookings`, booking);
 
       if (res.data.success) {
         toast.success("Booking confirmed successfully!");

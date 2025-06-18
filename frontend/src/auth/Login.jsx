@@ -14,7 +14,7 @@ export default function Login() {
     setLoading(true);
     
     try {
-      const res = await API.post(`${process.env.VITE_BACKEND_URL}/auth/login`, { email, password });
+      const res = await API.post(`${import.meta.env.VITE_BACKEND_URL}/auth/login`, { email, password });
       
       if (res.data.success) {
         const { token, user } = res.data;

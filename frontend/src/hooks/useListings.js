@@ -8,7 +8,7 @@ export function useListings() {
 
   const fetchListings = async () => {
     try {
-      const res = await API.get(`${process.env.VITE_BACKEND_URL}/listings`);
+      const res = await API.get(`${import.meta.env.VITE_BACKEND_URL}/listings`);
       setListings(Array.isArray(res.data) ? res.data : res.data.listings || []);
     } catch (error) {
       console.error("Error fetching listings:", error);
