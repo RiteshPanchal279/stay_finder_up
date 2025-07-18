@@ -23,7 +23,7 @@ const Dashboard = () => {
 
   const fetchHostListings = async () => {
     try {
-      const res = await API.get(`${process.env.VITE_BACKEND_URL}/listings/host/${userId}`);
+      const res = await API.get(`${import.meta.env.VITE_BACKEND_URL}/listings/host/${userId}`);
       setListings(res.data.listings || []);
     } catch (err) {
       console.error("Error fetching listings:", err);
