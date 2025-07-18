@@ -105,7 +105,7 @@ const Dashboard = () => {
         host: userId,
       };
 
-      const res = await API.post(`${process.env.VITE_BACKEND_URL}/listings`, listingData);
+      const res = await API.post(`${import.meta.env.VITE_BACKEND_URL}/listings`, listingData);
       toast.success("Listing created successfully!");
       setFormData({
         title: "",
